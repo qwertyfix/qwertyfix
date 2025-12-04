@@ -5,24 +5,20 @@
 
 - My passion is breaking and securing software, and tackling complex logic puzzles.
 ## 🛠 Skills
-Core Tools & Offensive Security
-- Networking/Scanning: Nmap, Wireshark, Protocol Analysis.
+🔬 Specialization Focus
+Reverse Engineering: Binary Analysis, Assembly, Anti-Cheat Protection.
 
-- Web Application: Burp Suite, Web Exploitation, API Fuzzing.
+AppSec Methodology: Threat Modeling, Secure Coding, SAST/DAST.
 
-- General: Shell Scripting, Git, Linux/Bash.
+⚔️ Offensive & Foundational
+Tools: Burp Suite, Nmap, Web Exploitation.
 
-Application Security & Development
-- Programming: Python, C/C++ (Essential for RE), C# (Relevant for GameDev).
+OS/Foundational: Linux/Bash, Git, Protocol Analysis.
 
-- AppSec: Threat Modeling, Secure Coding Practices, SAST/DAST Methodologies.
+💻 Development & Automation
+Languages: Python, C/C++, C#.
 
-- DevSecOps: CI/CD Integration, Dependency Scanning.
-
-Specialization: Reverse Engineering (RE)
-- Tools: Ghidra, IDA Free/Pro (or specific debugger/disassembler), Debugging (GDB/x64dbg).
-
-- Concepts: Assembly Language, Binary Analysis, Anti-Cheat Bypass/Protection.
+DevSecOps: CI/CD Integration, Automation, Secure Development.
 
 
 ## 🚀 About Me
