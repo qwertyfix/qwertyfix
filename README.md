@@ -6,4 +6,4 @@ Main tools: Python (for scripts) and other tools.
 
 I enjoy solving challenging tasks and improving my skills.
 
-![tryhackme stats](https://raw.githubusercontent.com/qwertyfix/qwertyfix/assets/thm_propic.png)
+![tryhackme stats](https://raw.githubusercontent.com/qwertyfix/qwertyfix/assets/qwertyfix.png)
