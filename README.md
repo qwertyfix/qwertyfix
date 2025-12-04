@@ -3,8 +3,6 @@
 
 - Cybersecurity Student & Practitioner focused on Application Security (AppSec) and deep-level Reverse Engineering (RE).
 
-<img src="https://tryhackme-badges.s3.amazonaws.com/qwertyfix.png" alt="Your Image Badge" />
-
 - My passion is breaking and securing software, and tackling complex logic puzzles.
 ## 🛠 Skills
 Core Tools & Offensive Security
@@ -34,6 +32,7 @@ I am a dedicated Cybersecurity Student and an active CTF Competitor, known for e
 My primary goal is to become an AppSec Developer / Secure Software Engineer, specializing in Reverse Engineering to build robust defenses for critical software assets.
 
 ## 🔗 Links
+<img src="https://tryhackme-badges.s3.amazonaws.com/qwertyfix.png" alt="Your Image Badge" />
 
 
 
