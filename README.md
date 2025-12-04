@@ -34,4 +34,6 @@ My primary goal is to become an AppSec Developer / Secure Software Engineer, spe
 
 ## Other
 
+I like pizza 🍕
+
 
