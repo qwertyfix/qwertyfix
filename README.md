@@ -13,12 +13,11 @@ AppSec Methodology: Threat Modeling, Secure Coding, SAST/DAST.
 ⚔️ Offensive & Foundational
 Tools: Burp Suite, Nmap, Web Exploitation.
 
-OS/Foundational: Linux/Bash, Git, Protocol Analysis.
+OS/Foundational: Linux/Bash, Protocol Analysis.
 
 💻 Development & Automation
-Languages: Python, C/C++, C#.
+Languages: Python.
 
-DevSecOps: CI/CD Integration, Automation, Secure Development.
 
 
 ## 🚀 About Me
