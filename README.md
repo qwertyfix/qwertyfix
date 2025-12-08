@@ -27,7 +27,8 @@ I am a dedicated Cybersecurity Student and an active CTF Competitor, known for e
 My primary goal is to become an AppSec Developer / Secure Software Engineer, specializing in Reverse Engineering to build robust defenses for critical software assets.
 
 ## 🔗 Links
-<img src="https://tryhackme-badges.s3.amazonaws.com/qwertyfix.png" alt="Your Image Badge" />
+<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5292633" style='border:none;'></iframe>
+
 
 
 
