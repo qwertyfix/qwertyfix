@@ -18,7 +18,7 @@
 | **Languages** | x64 Assembly, Python, C/C++ |
 | **Core Interests** | Malware Analysis |
 
-### Battle Statistics
+### Statistics
 
 <div>
   <img src="./profile-stats.svg" />
