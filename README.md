@@ -6,22 +6,6 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&repeat=false&color=36BCF7&width=435&lines=%E2%94%8C%E2%94%80%E2%94%80(kali%E3%89%BFqwertyfix)-%5B~%5D)](https://git.io/typing-svg)
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&repeat=false&color=36BCF7&width=435&lines=%E2%94%94%E2%94%80%24+sudo+su)](https://git.io/typing-svg)
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&repeat=false&color=36BCF7&width=435&lines=%5Bsudo%5D+password+for+qwertyfix:+**********)](https://git.io/typing-svg)
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=36BCF7&width=435&lines=qwertyfix;Binary+Security+Researcher;Reverse+Engineering;Better+Than+Yesterday)](https://git.io/typing-svg)
-
-</div>
-
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=36BCF7&center=true&width=500&height=120&lines=%E2%94%8C%E2%94%80%E2%94%80(kali%E3%B1%BFqwertyfix)-%5B~%5D;%E2%94%94%E2%94%80%24+sudo+su;%5Bsudo%5D+password+for+qwertyfix:+**********;root@qwertyfix:~%23+whoami;qwertyfix;Binary+Security+Researcher;Reverse+Engineering;Better+Than+Yesterday)](https://git.io/typing-svg)
-
-</div>
-
 ### About me
 
 - **Specialization:** Reverse Engineering & Pwn
@@ -36,8 +20,6 @@
 | **Languages** | x64 Assembly, Python, C/C++ |
 | **Core Interests** | Malware Analysis |
 
-### Statistics
-
-<div>
-  <img src="./profile-stats.svg" />
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qwertyfix&layout=compact&theme=tokyonight&hide_border=true" />
 </div>
