@@ -20,6 +20,6 @@
 
 ### Battle Statistics
 
-<div align="center">
+<div>
   <img src="./profile-stats.svg" />
 </div>
