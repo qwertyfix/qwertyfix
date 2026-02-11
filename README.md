@@ -1,10 +1,11 @@
 <div align="center">
-  
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=qwertyfix;CyberSec+Student)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&repeat=false&width=435&lines=%E2%94%8C%E2%94%80%E2%94%80(kali%E3%89%BFqwertyfix)-%5B~%5D)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&repeat=false&width=435&lines=%E2%94%94%E2%94%80%24+su+root)](https://git.io/typing-svg)
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&repeat=false&width=435&lines=%E2%94%94%E2%94%80%24+su+root+++++++)](https://git.io/typing-svg)
+
 
 </div>
 
