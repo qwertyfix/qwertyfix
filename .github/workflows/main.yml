@@ -28,19 +28,22 @@ jobs:
           cd generator
           npm install
           npm run build
-
-          # --- ПРЯМОЙ ПАТЧ СКОМПИЛИРОВАННОГО КОДА ---
-          # 1. Меняем цвета в уже собранном JS-файле
-          # Ищем старый цвет фона и меняем на твой везде в папке dist
-          find dist/ -type f -name "*.js" -exec sed -i 's/#000000/#0d1117/g' {} +
-          find dist/ -type f -name "*.js" -exec sed -i 's/#00ff00/#36BCF7/g' {} +
-          
-          # 2. Меняем текст в собранном коде
-          find dist/ -type f -name "*.js" -exec sed -i 's/whoami/.\/ctf_prep/g' {} +
-          find dist/ -type f -name "*.js" -exec sed -i 's/Full Stack Developer/Binary Security Researcher/g' {} +
-
-          # Запуск уже пропатченного кода
           node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
+          
+          # 1. МЕНЯЕМ ФОН (rgb(0,0,0) -> тёмный GitHub)
+          sed -i 's/rgb(0,0,0)/rgb(13,17,23)/g' github_stats.svg
+          
+          # 2. МЕНЯЕМ ВСЕ ЗЕЛЕНЫЕ ЦВЕТА НА ТВОЙ ГОЛУБОЙ (#36BCF7)
+          # Патчим классы f, g, h, i, k (все вариации зеленого в твоем SVG)
+          sed -i 's/rgb(0,204,0)/rgb(54,188,247)/g' github_stats.svg
+          sed -i 's/rgb(0,255,0)/rgb(54,188,247)/g' github_stats.svg
+          sed -i 's/rgb(0,255,102)/rgb(54,188,247)/g' github_stats.svg
+          sed -i 's/rgb(0,153,0)/rgb(54,188,247)/g' github_stats.svg
+          sed -i 's/fill:rgb(0,255,0)/fill:rgb(54,188,247)/g' github_stats.svg
+          
+          # 3. МЕНЯЕМ ТЕКСТ (whoami -> ctf_prep)
+          sed -i 's/whoami/.\/ctf_prep/g' github_stats.svg
+          
           cp github_stats.svg ../github_stats.svg
         env:
           GHT: ${{ secrets.GHT }}
