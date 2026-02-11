@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Generate SVG
-        uses: yogeshwaran01/github-stats-terminal-style@main
+        uses: yogeshwaran01/github-stats-terminal-style@master
         with:
           user: ${{ github.repository_owner }}
           theme: hacker
