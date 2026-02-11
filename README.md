@@ -4,17 +4,21 @@
 
 </div>
 
-About me
+### About me
 
 -**Specialization:** Reverse Engineering & Pwn
 -**Currently:** Makes own team for CTF
 
-
-
-Technical
+### Technical
 
 | Category | Tools & Skills |
 | :--- | :--- |
 | **Reverse Engineering** | Radare2, GDB |
 | **Languages** | x64 Assembly, Python, C/C++ |
 | **Core Interests** | Malware Analysis |
+
+### Battle Statistics
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=qwertyfix&show_icons=true&theme=tokyonight&hide_border=true" />
+</div>
