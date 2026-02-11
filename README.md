@@ -4,12 +4,15 @@
 
 </div>
 
+---
 
 ### About me
 
 - **Specialization:** Reverse Engineering & Pwn
 
 - **Currently:** Makes own team for CTF
+
+---
 
 ### Technical
 
@@ -19,7 +22,3 @@
 | **Languages** | x64 Assembly, Python, C/C++ |
 | **Core Interests** | Malware Analysis |
 
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qwertyfix&layout=compact&theme=tokyonight&hide_border=true" />
-</div>
