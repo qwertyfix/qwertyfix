@@ -1,6 +1,6 @@
 <div align="center">
 
-[![GitHub Stats Terminal](https://github.com/qwertyfix/название-репозитория/raw/main/github_stats.svg)](https://github.com/твой-ник/название-репозитория)
+[![GitHub Stats Terminal](https://github.com/qwertyfix/qwertyfix/raw/main/github_stats.svg)](https://github.com/qwertyfix/qwertyfix)
 
 </div>
 
