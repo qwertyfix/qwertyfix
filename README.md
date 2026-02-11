@@ -21,7 +21,7 @@
 
 <div align="center">
  
-[![My GitHub stats](https://github-readme-stats.vercel.app/api?username=qwertyfix)](https://github.com/anuraghazra/github-readme-stats)
+![Статистика qwertyfix](https://github-readme-stats.vercel.app/api?username=qwertyfix&show_icons=true&theme=tokyonight)
 
 </div>
 
