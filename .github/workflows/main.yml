@@ -27,20 +27,32 @@ jobs:
         run: |
           cd generator
           
-          # Находим файл, который ты скинул (пусть поиск будет автоматическим)
-          TARGET_FILE=$(grep -rl "hacker:" src/)
+          # 1. ПОЛНАЯ ПЕРЕЗАПИСЬ ТЕМ (Инъекция)
+          # Мы создаем файл themes.ts заново, оставляя только одну тему - твою.
+          cat <<EOF > src/themes.ts
+          export const THEMES = {
+            hacker: {
+              name: "hacker",
+              background: "#0d1117",
+              foreground: "#36BCF7",
+              cursor: "#36BCF7",
+              colors: {
+                "0": "#000000", "1": "#ff5555", "2": "#36BCF7", "3": "#f1fa8c",
+                "4": "#bd93f9", "5": "#ff79c6", "6": "#8be9fd", "7": "#f8f8f2",
+                "8": "#6272a4", "9": "#ff6e6e", "10": "#36BCF7", "11": "#ffffa5",
+                "12": "#d6acff", "13": "#ff92df", "14": "#a4ffff", "15": "#ffffff"
+              }
+            }
+          } as const;
+          export type ThemeName = "hacker";
+          EOF
 
-          # ПАТЧИМ ЦВЕТА темы Hacker
-          # Меняем фон на глубокий черный/темно-синий
-          sed -i 's/"background": "#000000"/"background": "#0d1117"/g' $TARGET_FILE
-          # Меняем основной текст (foreground) на твой голубой
-          sed -i 's/"foreground": "#00ff00"/"foreground": "#36BCF7"/g' $TARGET_FILE
-          # Меняем курсор
-          sed -i 's/"cursor": "#00ff00"/"cursor": "#36BCF7"/g' $TARGET_FILE
-          # Меняем ANSI цвета (зеленые оттенки на голубые)
-          sed -i 's/"2": "#00ff00"/"2": "#36BCF7"/g' $TARGET_FILE
-          sed -i 's/"10": "#00ff00"/"10": "#36BCF7"/g' $TARGET_FILE
+          # 2. ЗАМЕНА ТЕКСТА (whoami -> ctf_prep)
+          # Ищем во всех файлах src и заменяем жестко
+          grep -rl "whoami" src/ | xargs sed -i 's/whoami/.\/ctf_prep/g' || true
+          grep -rl "Full Stack Developer" src/ | xargs sed -i 's/Full Stack Developer/Binary Security Researcher/g' || true
 
+          # 3. СБОРКА И ЗАПУСК
           npm install
           npm run build
           node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
