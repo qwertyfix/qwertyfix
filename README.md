@@ -21,5 +21,6 @@
 ### Battle Statistics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=qwertyfix&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img width="500" src="https://github-readme-stats.vercel.app/api?username=qwertyfix&show_icons=true&theme=tokyonight&hide_border=true" />
 </div>
+
