@@ -1,1 +1,18 @@
-node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
+name: Update Github Stats
+
+on:
+  schedule:
+    - cron: '47 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate SVG
+        uses: yogeshwaran01/github-stats-terminal-style@main
+        with:
+          user: ${{ github.repository_owner }}
+          theme: hacker
+          token: ${{ secrets.GHT }}
