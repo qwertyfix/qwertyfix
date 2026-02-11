@@ -5,10 +5,14 @@
 </div>
 
 About me
+
 -**Specialization:** Reverse Engineering & Pwn
 -**Currently:** Makes own team for CTF
 
+
+
 Technical
+
 | Category | Tools & Skills |
 | :--- | :--- |
 | **Reverse Engineering** | Radare2, GDB |
