@@ -26,35 +26,20 @@ jobs:
       - name: Install and Build
         run: |
           cd generator
-          
-          # 1. ПОЛНАЯ ПЕРЕЗАПИСЬ ТЕМ (Инъекция)
-          # Мы создаем файл themes.ts заново, оставляя только одну тему - твою.
-          cat <<EOF > src/themes.ts
-          export const THEMES = {
-            hacker: {
-              name: "hacker",
-              background: "#0d1117",
-              foreground: "#36BCF7",
-              cursor: "#36BCF7",
-              colors: {
-                "0": "#000000", "1": "#ff5555", "2": "#36BCF7", "3": "#f1fa8c",
-                "4": "#bd93f9", "5": "#ff79c6", "6": "#8be9fd", "7": "#f8f8f2",
-                "8": "#6272a4", "9": "#ff6e6e", "10": "#36BCF7", "11": "#ffffa5",
-                "12": "#d6acff", "13": "#ff92df", "14": "#a4ffff", "15": "#ffffff"
-              }
-            }
-          } as const;
-          export type ThemeName = "hacker";
-          EOF
-
-          # 2. ЗАМЕНА ТЕКСТА (whoami -> ctf_prep)
-          # Ищем во всех файлах src и заменяем жестко
-          grep -rl "whoami" src/ | xargs sed -i 's/whoami/.\/ctf_prep/g' || true
-          grep -rl "Full Stack Developer" src/ | xargs sed -i 's/Full Stack Developer/Binary Security Researcher/g' || true
-
-          # 3. СБОРКА И ЗАПУСК
           npm install
           npm run build
+
+          # --- ПРЯМОЙ ПАТЧ СКОМПИЛИРОВАННОГО КОДА ---
+          # 1. Меняем цвета в уже собранном JS-файле
+          # Ищем старый цвет фона и меняем на твой везде в папке dist
+          find dist/ -type f -name "*.js" -exec sed -i 's/#000000/#0d1117/g' {} +
+          find dist/ -type f -name "*.js" -exec sed -i 's/#00ff00/#36BCF7/g' {} +
+          
+          # 2. Меняем текст в собранном коде
+          find dist/ -type f -name "*.js" -exec sed -i 's/whoami/.\/ctf_prep/g' {} +
+          find dist/ -type f -name "*.js" -exec sed -i 's/Full Stack Developer/Binary Security Researcher/g' {} +
+
+          # Запуск уже пропатченного кода
           node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
           cp github_stats.svg ../github_stats.svg
         env:
