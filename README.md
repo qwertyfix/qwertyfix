@@ -4,6 +4,9 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&repeat=false&color=36BCF7&width=435&lines=%E2%94%94%E2%94%80%24+sudo+su)](https://git.io/typing-svg)
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&repeat=false&width=435&lines=password%3A)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=qwertyfix;CyberSec+Student)](https://git.io/typing-svg)
+
 </div>
 
 
