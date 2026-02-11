@@ -6,8 +6,9 @@
 
 ### About me
 
--**Specialization:** Reverse Engineering & Pwn
--**Currently:** Makes own team for CTF
+- **Specialization:** Reverse Engineering & Pwn
+
+- **Currently:** Makes own team for CTF
 
 ### Technical
 
