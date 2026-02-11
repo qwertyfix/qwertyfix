@@ -9,7 +9,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout your repo
+        uses: actions/checkout@v4
+
+      - name: Checkout generator repo
+        uses: actions/checkout@v4
+        with:
+          repository: yogeshwaran01/github-stats-terminal-style
+          path: generator
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -18,14 +25,15 @@ jobs:
 
       - name: Install & Build
         run: |
+          cd generator
           npm install
           npm run build
-          # Генерация SVG
+          # Генерация SVG (создается внутри папки generator)
           node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
+          # Перемещаем файл в корень твоего репозитория
           mv github_stats.svg ../github_stats.svg
-
-      - name: Patch SVG
-        run: node patch_svg.js
+        env:
+          GHT: ${{ secrets.GHT }}
 
       - name: Commit & Push
         run: |
