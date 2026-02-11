@@ -1,5 +1,11 @@
 <div align="center">
 
+[![GitHub Stats Terminal](https://github.com/qwertyfix/название-репозитория/raw/main/github_stats.svg)](https://github.com/твой-ник/название-репозитория)
+
+</div>
+
+<div align="center">
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&repeat=false&color=36BCF7&width=435&lines=%E2%94%8C%E2%94%80%E2%94%80(kali%E3%89%BFqwertyfix)-%5B~%5D)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&repeat=false&color=36BCF7&width=435&lines=%E2%94%94%E2%94%80%24+sudo+su)](https://git.io/typing-svg)
