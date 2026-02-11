@@ -11,6 +11,17 @@
 
 </div>
 
+<div align="center">
+
+<pre>
+┌──(kali㉿qwertyfix)-[~]
+└─$ whoami
+</pre>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=qwertyfix;CyberSec+Student" />
+
+</div>
+
 ### About me
 
 -**Specialization:** Reverse Engineering & Pwn
