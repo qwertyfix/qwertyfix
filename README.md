@@ -4,7 +4,6 @@
 
 </div>
 
-<div align="center">
 
 ### About me
 
@@ -19,6 +18,7 @@
 | **Reverse Engineering** | Radare2, GDB |
 | **Languages** | x64 Assembly, Python, C/C++ |
 | **Core Interests** | Malware Analysis |
+
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qwertyfix&layout=compact&theme=tokyonight&hide_border=true" />
