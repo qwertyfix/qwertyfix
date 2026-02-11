@@ -22,6 +22,9 @@
 
 </div>
 
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=1&pause=999999&color=00FF00&background=000000&width=600&lines=┌──(kali㉿qwertyfix)-[~];└─$ whoami;qwertyfix;CyberSec+Student" />
+
+
 ### About me
 
 -**Specialization:** Reverse Engineering & Pwn
