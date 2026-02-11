@@ -1,1 +1,1 @@
-node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} <hacker>
+node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
