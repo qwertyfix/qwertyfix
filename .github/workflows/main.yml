@@ -30,40 +30,34 @@ jobs:
           npm run build
           node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
           
-          # Используем более гибкие регулярные выражения для поиска и замены
-          # ФОН
-          sed -i 's/fill:rgb(0,0,0)/fill:rgb(13,17,23)/g' github_stats.svg
-          
-          # ВСЕ ВАРИАНТЫ ЗЕЛЕНОГО (одним махом через регулярку, если возможно, или точечно)
-          sed -i 's/0,204,0/54,188,247/g' github_stats.svg
+          # 1. ПРИНУДИТЕЛЬНЫЙ ПАТЧ (обрабатываем файл прямо в месте рождения)
+          # Используем расширенный sed для надежности
           sed -i 's/0,255,0/54,188,247/g' github_stats.svg
+          sed -i 's/0,204,0/54,188,247/g' github_stats.svg
           sed -i 's/0,255,102/54,188,247/g' github_stats.svg
           sed -i 's/0,153,0/54,188,247/g' github_stats.svg
-          
-          # ТЕКСТ (whoami -> ./ctf_prep)
+          sed -i 's/0,0,0/13,17,23/g' github_stats.svg
           sed -i 's/whoami/.\/ctf_prep/g' github_stats.svg
+          sed -i 's/Full Stack Developer/Binary Security Researcher/g' github_stats.svg
+
+          # 2. ПЕРЕМЕЩЕНИЕ С ПЕРЕЗАПИСЬЮ
+          mv -f github_stats.svg ../github_stats.svg
+          cd ..
+
+          # 3. ПРОВЕРКА (увидим результат в логах Actions)
+          echo "Final check for blue color:"
+          grep "54,188,247" github_stats.svg || echo "COLOR NOT FOUND!"
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
           
-          # ПРОВЕРКА: Выведем в лог наличие нового текста (для отладки)
-          echo "Checking if patch applied:"
-          grep "./ctf_prep" github_stats.svg || echo "PATCH FAILED!"
-
-          cp github_stats.svg ../github_stats.svg
-
-      - name: Commit and Push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          # Force add на случай игнорирования
-          git add -f github_stats.svg
-          # Проверка статуса
-          git status
-          git commit -m "Update GitHub Stats: Blue Theme and Custom Text" || echo "No changes to commit"
-          git push
-
-      - name: Commit and Push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
+          # Удаляем индекс, если он мешает, и добавляем файл заново
           git add github_stats.svg
-          git commit -m "Update GitHub Stats Terminal" || exit 0
-          git push
+          
+          # Фиксируем изменения. Если файл не изменился, скрипт не упадет
+          git commit -m "Update GitHub Stats: Terminal Blue Mode" || exit 0
+          
+          # Принудительный пуш для обновления
+          git push origin main
