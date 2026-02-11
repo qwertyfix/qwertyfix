@@ -3,13 +3,13 @@ import fs from "fs";
 const file = "github_stats.svg";
 let svg = fs.readFileSync(file, "utf8");
 
-// Патч фона и текста
+// Изменяем фон и цвет текста
 svg = svg.replace(
   /<svg/,
   '<svg><style>.a{fill:#0d1117 !important}.f,.g,.h,.i,.k{fill:#36BCF7 !important}</style>'
 );
 
-// Патч текста
+// Меняем текст
 svg = svg.replace("whoami", "./ctf_prep");
 svg = svg.replace("Full Stack Developer", "Binary Security Researcher");
 
