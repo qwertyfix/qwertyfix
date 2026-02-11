@@ -26,6 +26,21 @@ jobs:
       - name: Install and Build
         run: |
           cd generator
+          
+          # Находим файл, который ты скинул (пусть поиск будет автоматическим)
+          TARGET_FILE=$(grep -rl "hacker:" src/)
+
+          # ПАТЧИМ ЦВЕТА темы Hacker
+          # Меняем фон на глубокий черный/темно-синий
+          sed -i 's/"background": "#000000"/"background": "#0d1117"/g' $TARGET_FILE
+          # Меняем основной текст (foreground) на твой голубой
+          sed -i 's/"foreground": "#00ff00"/"foreground": "#36BCF7"/g' $TARGET_FILE
+          # Меняем курсор
+          sed -i 's/"cursor": "#00ff00"/"cursor": "#36BCF7"/g' $TARGET_FILE
+          # Меняем ANSI цвета (зеленые оттенки на голубые)
+          sed -i 's/"2": "#00ff00"/"2": "#36BCF7"/g' $TARGET_FILE
+          sed -i 's/"10": "#00ff00"/"10": "#36BCF7"/g' $TARGET_FILE
+
           npm install
           npm run build
           node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
