@@ -1,57 +1,37 @@
-name: Update Github Stats
+name: Update Terminal Stats
 
 on:
   schedule:
-    - cron: '47 2 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Checkout generator repo
-        uses: actions/checkout@v4
-        with:
-          repository: yogeshwaran01/github-stats-terminal-style
-          path: generator
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install and Build
+      - name: Install & Build
         run: |
-          cd generator
           npm install
           npm run build
-          node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} hacker
-          
-          # 1. СОЗДАЕМ ИНЪЕКЦИЮ СТИЛЕЙ
-          # Мы переопределяем классы .a (фон) и .f, .g, .h, .i (текст)
-          # !important заставит SVG игнорировать старые цвета.
-          CSS_PATCH="<style>.a{fill:#0d1117 !important} .f,.g,.h,.i,.k{fill:#36BCF7 !important}</style>"
-          
-          # 2. ВСТАВЛЯЕМ ПАТЧ СРАЗУ ПОСЛЕ ТЕГА <svg>
-          sed -i "s|<svg|<svg>${CSS_PATCH}|" github_stats.svg
-          
-          # 3. ЗАМЕНА ТЕКСТА (тут sed обычно не мажет)
-          sed -i 's/whoami/.\/ctf_prep/g' github_stats.svg
-          sed -i 's/Full Stack Developer/Binary Security Researcher/g' github_stats.svg
 
-          # 4. ПЕРЕМЕЩЕНИЕ И ПРОВЕРКА
-          mv -f github_stats.svg ../github_stats.svg
-          cd ..
-          echo "Checking if styles were injected:"
-          head -n 2 github_stats.svg | grep "important" || echo "INJECTION FAILED!"
-
-      - name: Commit and Push
+      - name: Generate SVG
+        run: |
+          node dist/bin/github-stats-terminal.js ${{ github.repository_owner }} ctf_dark \
+            --focus="Reverse Engineering & Malware Analysis" \
+            --role="Binary Exploitation"
+          
+      - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add github_stats.svg
-          git commit -m "Ultra Patch: CSS Injection Mode" || exit 0
+          git commit -m "Update Terminal Stats" || exit 0
           git push origin main
+
