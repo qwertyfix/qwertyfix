@@ -20,8 +20,5 @@
 ### Battle Statistics
 
 <div align="center">
- 
-![Статистика qwertyfix](https://github-readme-stats.vercel.app/api?username=qwertyfix&show_icons=true&theme=tokyonight)
-
+  <img src="https://github-readme-stats.vercel.app/api?username=qwertyfix&show_icons=true&theme=tokyonight&hide_border=true" />
 </div>
-
