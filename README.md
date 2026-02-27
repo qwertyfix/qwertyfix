@@ -10,7 +10,7 @@
 
 - **Specialization:** Reverse Engineering & Pwn
 
-- **Currently:** Makes own team for CTF
+- **Currently:** ZeroTrust Team Member
 
 ---
 
